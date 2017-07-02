@@ -1,5 +1,19 @@
 <h1>Create a new post domain</h1>
+<!-- show the errrors message to the users -->
 
+	<% if @domain.errors.any? %>
+	
+		<ul>
+			<% @domain.errors.full_messages.each do |msg| %>
+			<li>
+					<%= msg %>
+			</li>
+		</ul>	
+	<% end %>
+	<% end %>
+
+
+<!-- Form -->
 <%= form_for @domain do |f| %>
 	<p>
 	<%= f.label :title %><br>
