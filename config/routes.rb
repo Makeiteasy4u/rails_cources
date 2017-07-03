@@ -4,5 +4,6 @@ Rails.application.routes.draw do
 #   resources :articles
 #   resources :blogs
 # 	resources :domains  
-	resources :topics
+# 	resources :topics
+	resources :lists
 end

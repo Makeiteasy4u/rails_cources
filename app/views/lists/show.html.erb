@@ -1,0 +1,19 @@
+<h1>Show action</h1>
+
+<!-- form -->
+	<%= form_for @list do |f| %>
+		<p>
+		<!-- title 		 -->
+		<%= f.label :title %><br>
+		<%= f.text_field :title %>
+		</p>
+		<p>
+		<!-- description 		 -->
+		<%= f.label :description %><br>
+		<%= f.text_area :description %>
+		</p>
+		<p>
+		<!-- submit 		 -->
+		<%= f.submit %>
+		</P>	
+	<% end %>

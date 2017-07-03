@@ -1,0 +1,27 @@
+<h1>NEW action</h1>
+<!-- if not meet the validates show this message bellow -->
+	<% if @list.errors.any? %>
+		
+		<% @list.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+			
+		<% end %>
+	<% end %>
+
+<!-- form -->
+	<%= form_for @list do |f| %>
+		<p>
+		<!-- title 		 -->
+		<%= f.label :title %><br>
+		<%= f.text_field :title %>
+		</p>
+		<p>
+		<!-- description 		 -->
+		<%= f.label :description %><br>
+		<%= f.text_area :description %>
+		</p>
+		<p>
+		<!-- submit 		 -->
+		<%= f.submit %>
+		</P>	
+	<% end %>
