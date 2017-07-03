@@ -1,0 +1,21 @@
+<h1>List of all topics </h1>
+
+<!-- table to show all topics in DB -->
+<table>
+	<caption></caption>
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>description</th>
+		</tr>
+	</thead>
+	<% @topics.each do |top| %>
+	<tbody>		
+		<tr>
+			<td><%= top.title %></td>
+			<td><%= top.description %></td>
+		</tr>
+	</tbody>
+	<% end %>
+
+</table>

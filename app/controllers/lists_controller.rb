@@ -2,6 +2,9 @@ class ListsController < ApplicationController
 
 	# actions
 	
+# 	def index 
+# 		
+# 	end	
 	def new 
 		@list = List.new
 		
