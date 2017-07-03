@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 #   resources :blogs
 # 	resources :domains  
 	resources :topics
-	resources :lists
+# 	resources :lists
 end

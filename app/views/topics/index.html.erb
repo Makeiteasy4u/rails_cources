@@ -1,4 +1,8 @@
 <h1>List of all topics </h1>
+<!-- add link to create action (for create a new topic/post) -->
+<p>
+<%= link_to"Create a new topic", new_topic_path %>	
+</p>
 
 <!-- table to show all topics in DB -->
 <table>
@@ -14,6 +18,8 @@
 		<tr>
 			<td><%= top.title %></td>
 			<td><%= top.description %></td>
+			<td><%= link_to"Edit", edit_topic_path(top) %></td>
+			<td><%= link_to"Show", topic_path(top)%> </td>
 		</tr>
 	</tbody>
 	<% end %>
