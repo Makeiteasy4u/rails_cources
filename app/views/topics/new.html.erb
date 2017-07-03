@@ -1,0 +1,35 @@
+<h1>Page of NEW action</h1>
+<!-- if any errors or not bypassing the Validates filters, show this !! -->
+	<% if @topic.errors.any? %>
+	<h2>sorry you can't create a Post, see why in list bellow !!</h2>
+	<ul>
+		<% @topic.errors.full_messages.each do |msg| %>
+			
+			<li>
+				<%= msg %>
+			</li>
+		
+		<% end %>
+		
+	</ul>	
+	<% end %>	
+
+<!-- form for new action page -->
+
+	<%= form_for @topic do |f|%>
+		<p>
+			<%= f.label :title %><br>
+			<%= f.text_field :title %>
+		</p>
+		
+		<p>
+			<%= f.label :description %><br>
+			<%= f.text_area :description %>
+		</p>
+		
+		<p>
+			<%= f.submit %>
+		</p>	
+				
+		
+	<% end %>
